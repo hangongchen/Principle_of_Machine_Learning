@@ -18,8 +18,6 @@ def get_error(predictions,labels=test_label):
     return error1,error2
 
 if __name__ == "__main__":
-    # 仅在直接运行 KNN.py 时执行的代码
-    # 测试代码或其他逻辑
     # Get data in nparrays
     train_data, train_label = data_gainer.load('TrainingData.csv')
     test_data, test_label = data_gainer.load('TestingData.csv')

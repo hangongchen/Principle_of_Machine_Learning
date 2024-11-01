@@ -1,7 +1,6 @@
 from PJ1 import data_gainer
 from sklearn.decomposition import PCA
 from sklearn import neighbors
-from PJ1.KNN import get_error
 from sklearn.svm import SVC
 import matplotlib.pyplot as plt
 
@@ -9,6 +8,17 @@ import matplotlib.pyplot as plt
 #Get data in nparrays
 train_data,train_label=data_gainer.load('TrainingData.csv')
 test_data,test_label=data_gainer.load('TestingData.csv')
+def get_error(predictions,labels=test_label):
+    error1=0
+    error2=0
+    for i, prediction in enumerate(predictions):
+        if labels[i] == 0 and prediction == 1:
+            error1 += 1
+        elif labels[i] == 1 and prediction == 0:
+            error2 += 1
+    error1 /= (i + 1)
+    error2 /= (i + 1)
+    return error1,error2
 #For better visulization, I select k from 1 to 15
 #initialize varibles
 K=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
