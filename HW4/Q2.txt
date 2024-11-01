@@ -1,0 +1,2 @@
+w= [[0.5860576  0.71213141 1.95500623 1.61800764]]
+{'hypertension': {'Gini Impurity': 0.14295615100629253, 'Information Gain': 0.014297005653686634}, 'heart_disease': {'Gini Impurity': 0.14601404503959087, 'Information Gain': 0.003982146278906973}}

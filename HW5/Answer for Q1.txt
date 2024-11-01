@@ -1,0 +1,18 @@
+Classifier for brands A and B:
+Hyperplane equation: -74.48*x1 + 20.17*x2 + 53.74*x3 + 6.689999999999998*x4 + 2.7499999999999996*x5 + -6.120000000000001*x6 + 5.409999999999999*x7 + 0.0 = 0
+
+Classifier for brands A and C:
+Hyperplane equation: -21.36*x1 + -8.120000000000001*x2 + 27.689999999999998*x3 + 1.0899999999999999*x4 + 1.15*x5 + 0.7*x6 + 2.1899999999999995*x7 + 0.0 = 0
+
+Classifier for brands B and C:
+Hyperplane equation: 6.189999999999998*x1 + -31.96*x2 + 17.23*x3 + 0.6299999999999999*x4 + 1.4900000000000002*x5 + 7.909999999999998*x6 + 0.5999999999999996*x7 + 0.0 = 0
+
+Margin for brands A and B: 0.010563763253864185
+
+Margin for brands A and C: 0.027770099206986032
+
+Margin for brands B and C: 0.026516937994992974
+
+s1 is classified as brand 'C'
+s2 is classified as brand 'A'
+s3 is classified as brand 'B'

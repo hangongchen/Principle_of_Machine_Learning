@@ -1,0 +1,67 @@
+Mean Feature Vector:
+mois      40.903067
+prot      13.373567
+fat       20.229533
+ash        2.633233
+sodium     0.669400
+carb      22.864767
+cal        3.271000
+dtype: float64
+
+Scatter Matrix (Before Standardization):
+[[ 9.12595538e+01  2.21435833e+01 -1.46895678e+01  3.22109607e+00
+  -3.61865043e-01 -1.01930554e+02 -4.52791813e+00]
+ [ 2.21435833e+01  4.14014050e+01  2.87610441e+01  6.73072020e+00
+   1.02262723e+00 -9.90197003e+01  2.80297759e-01]
+ [-1.46895678e+01  2.87610441e+01  8.05624419e+01  9.02193931e+00
+   3.10256393e+00 -1.03608864e+02  4.25498074e+00]
+ [ 3.22109607e+00  6.73072020e+00  9.02193931e+00  1.61219787e+00
+   3.80021010e-01 -2.05803278e+01  2.57019498e-01]
+ [-3.61865043e-01  1.02262723e+00  3.10256393e+00  3.80021010e-01
+   1.37164856e-01 -4.14119479e+00  1.54304615e-01]
+ [-1.01930554e+02 -9.90197003e+01 -1.03608864e+02 -2.05803278e+01
+  -4.14119479e+00  3.25070892e+02 -2.62535217e-01]
+ [-4.52791813e+00  2.80297759e-01  4.25498074e+00  2.57019498e-01
+   1.54304615e-01 -2.62535217e-01  3.84442475e-01]]
+
+First Principal Component (w1) Before Standardization:
+[ 2.76963426e-01  2.66941457e-01  2.78933559e-01  5.54340960e-02
+  1.11416057e-02 -8.78084364e-01  6.03287596e-04]
+
+Second Principal Component (w2) Before Standardization:
+[ 0.74707368 -0.05573295 -0.65784531 -0.04060421 -0.02381376  0.00681755
+ -0.06125383]
+
+Comparison of Original and Approximated Feature Values for the First Two Samples (Before Standardization):
+   Original Moisture  Approximated Moisture  Original Protein  Approximated Protein  Original Fat  Approximated Fat  Original Ash  Approximated Ash  Original Sodium  Approximated Sodium  Original Carb  Approximated Carb  Original Calories  Approximated Calories
+0              27.82              40.160032             21.43             20.783381         44.87          34.25292          5.11          4.476068             1.77             1.203746           0.77           0.339627               4.93               3.928040
+1              28.49              40.926634             21.26             20.628471         43.89          33.40024          5.34          4.410453             1.79             1.172524           1.02           0.645830               4.84               3.857264
+
+Scatter Matrix (After Standardization):
+[[ 1.          0.36024768 -0.17131821  0.26555552 -0.1022789  -0.59180165
+  -0.76444054]
+ [ 0.36024768  1.          0.49800167  0.8238437   0.42912952 -0.85354226
+   0.0702581 ]
+ [-0.17131821  0.49800167  1.          0.79163396  0.93332522 -0.64023817
+   0.7645671 ]
+ [ 0.26555552  0.8238437   0.79163396  1.          0.80812215 -0.89898837
+   0.32646845]
+ [-0.1022789   0.42912952  0.93332522  0.80812215  1.         -0.62017634
+   0.6719575 ]
+ [-0.59180165 -0.85354226 -0.64023817 -0.89898837 -0.62017634  1.
+  -0.02348458]
+ [-0.76444054  0.0702581   0.7645671   0.32646845  0.6719575  -0.02348458
+   1.        ]]
+
+First Principal Component (w1) After Standardization:
+[ 0.06470937  0.3787609   0.44666592  0.47188953  0.43570289 -0.42491371
+  0.2444873 ]
+
+Second Principal Component (w2) After Standardization:
+[ 0.62827587  0.26970665 -0.23437908  0.11099042 -0.20166165 -0.32031208
+ -0.56745756]
+
+Comparison of Original and Approximated Feature Values for the First Two Samples (After Standardization):
+   Original Moisture  Approximated Moisture  Original Protein  Approximated Protein  Original Fat  Approximated Fat  Original Ash  Approximated Ash  Original Sodium  Approximated Sodium  Original Carb  Approximated Carb  Original Calories  Approximated Calories
+0              27.82             418.687994             21.43            106.972911         44.87        227.483356          5.11          8.596803             1.77             1.924236           0.77         412.236601               4.93               6.998477
+1              28.49             419.594581             21.26            107.265283         43.89        227.222175          5.34          8.625919             1.79             1.915218           1.02         411.269649               4.84               6.947846
