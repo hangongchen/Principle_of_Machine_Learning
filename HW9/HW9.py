@@ -5,25 +5,13 @@ from sklearn.ensemble import BaggingClassifier
 from sklearn.metrics import accuracy_score
 
 
-# 加载数据
 file_path = 'HW9/moonDataset.csv'
 moon_data = pd.read_csv(file_path)
-
-# 数据概览
-print("数据结构：")
-print(moon_data.head())
-print(f"数据集大小: {moon_data.shape}")
-
-# 划分训练集和测试集
 train_data = moon_data.iloc[:150]
 test_data = moon_data.iloc[150:]
 print(test_data)
-
-# 创建 50 个 bootstrap 训练数据集
 bootstrapped_datasets = [train_data.sample(n=150, replace=True, random_state=i) for i in range(50)]
-
-# 打印第一个 bootstrap 数据集以验证
-print("\n第一个 bootstrap 数据集：")
+print("\nthe first bootstrap dataset")
 print(bootstrapped_datasets[0])
 classifier = MLPClassifier(hidden_layer_sizes=(10,), random_state=1, max_iter=500)
 error_rate=[]
@@ -33,7 +21,6 @@ for dataset in bootstrapped_datasets:
     classifier.fit(train_x,train_y)
     pred=classifier.predict(test_data.iloc[:,:-1])
     error_rate.append(1-accuracy_score(pred,test_data.iloc[:,-1]))
-# 改成折线图
 plt.figure(figsize=(10, 6))
 plt.scatter(range(1, 51), error_rate, marker='o', label="Error Rate per Network")
 plt.title("Line Plot of Error Rates (50 Neural Networks)")
