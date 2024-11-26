@@ -13,7 +13,7 @@ print(test_data)
 bootstrapped_datasets = [train_data.sample(n=150, replace=True, random_state=i) for i in range(50)]
 print("\nthe first bootstrap dataset")
 print(bootstrapped_datasets[0])
-classifier = MLPClassifier(hidden_layer_sizes=(10,), random_state=1, max_iter=500)
+classifier = MLPClassifier(hidden_layer_sizes=(10,), random_state=1, max_iter=1000)
 error_rate=[]
 for dataset in bootstrapped_datasets:
     train_x= dataset.iloc[:,:-1]
@@ -22,10 +22,10 @@ for dataset in bootstrapped_datasets:
     pred=classifier.predict(test_data.iloc[:,:-1])
     error_rate.append(1-accuracy_score(pred,test_data.iloc[:,-1]))
 plt.figure(figsize=(10, 6))
-plt.scatter(range(1, 51), error_rate, marker='o', label="Error Rate per Network")
-plt.title("Line Plot of Error Rates (50 Neural Networks)")
-plt.xlabel("Bootstrap Dataset Index")
-plt.ylabel("Error Rate")
+plt.hist(error_rate, bins=10, alpha=0.75, edgecolor='black', label="Error Rate Distribution")
+plt.title("Histogram of Error Rates (50 Neural Networks)")
+plt.xlabel("Error Rate")
+plt.ylabel("Frequency")
 plt.grid(axis='y', linestyle='--', alpha=0.7)
 plt.legend()
 plt.show()
